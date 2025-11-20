@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #242424; /* grey-dark shade */
+  color: #fff;
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* =============================
+   HEADER (FINAL RESPONSIVE)
+============================= */
+header {
+  width: 100%;
+  padding: 18px 8%;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* LOGO TEXT */
+header h2 {
+  font-size: 28px;
+  font-weight: 600;
+  color: #00eaff;
+  letter-spacing: 2px;
+}
+
+/* NAV LIST */
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  flex-wrap: wrap;                 /* 🟢 Responsive wrapping */
+  justify-content: flex-end;
+}
+
+/* NAV LINKS */
+header nav ul li a {
+  color: #ccc;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+  white-space: nowrap;             /* Prevents breaking words */
+}
+
+header nav ul li a:hover {
+  color: #00eaff;
+  text-shadow: 0 0 2px #00eaff;
+  transform: scale(1.12);
+}
+
+
+/* =============================
+   RESPONSIVE NAVIGATION
+============================= */
+
+/* 🌙 TABLETS (900px) */
+@media (max-width: 900px) {
+
+  header {
+    padding: 16px 6%;
+  }
+
+  header nav ul {
+    gap: 25px;                     /* Slightly smaller gap */
+  }
+
+  header h2 {
+    font-size: 23px;
+  }
+}
+
+/* 📱 PHONES (600px) */
+@media (max-width: 600px) {
+
+  header {
+    padding: 14px 4%;
+    flex-direction: column;         /* 🟢 Logo + Nav vertically aligned */
+    gap: 8px;
+  }
+
+  header nav ul {
+    gap: 16px;
+    justify-content: center;        /* Center nav on phone */
+  }
+
+  header h2 {
+    font-size: 22px;
+    text-align: center;
+  }
+
+  header nav ul li a {
+    font-size: 14px;                /* Mobile readability */
+  }
+}
+
+
+/* ===== CONTACT PAGE ===== */
+
+.contact-main {
+  padding-top: 120px;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-section {
+  width: 100%;
+  max-width: 900px;
+  text-align: center;
+}
+
+.contact-section h1 {
+  font-size: 42px;
+  font-weight: 700;
+  color: #00eaff;
+  margin-bottom: 10px;
+}
+
+.contact-section p {
+  font-size: 18px;
+  color: #ccc;
+  margin-bottom: 40px;
+}
+
+/* CARD GRID */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  padding: 20px 0;
+}
+
+/* Individual Card */
+.contact-card {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 28px;
+  border-radius: 14px;
+  text-align: center;
+  border: 1px solid rgba(0, 255, 255, 0.15);
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.1);
+  transition: 0.3s ease;
+  backdrop-filter: blur(12px);
+}
+
+.contact-card:hover {
+  transform: translateY(-8px);
+  border-color: #00eaff;
+  box-shadow: 0 0 18px rgba(0, 255, 255, 0.3);
+}
+
+/* ICON */
+.contact-card img {
+  width: 55px;
+  height: 55px;
+  margin-bottom: 12px;
+  filter: brightness(0.9);
+}
+
+/* Title */
+.contact-card h3 {
+  margin-bottom: 24px;
+  font-size: 20px;
+  color: cadetblue;
+}
+
+/* Link */
+.contact-card a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 15px;
+  opacity: 0.9;
+  transition: 0.3s;
+}
+
+.contact-card a:hover {
+  opacity: 1;
+  text-shadow: 0 0 2px #00eaff;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .contact-section h1 {
+    font-size: 32px;
+  }
+  .contact-card {
+    padding: 20px;
+  }
+}
+.cv-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000;
+  font-weight: 600;
+  border-radius: 30px;
+  /* margin-top: px; */
+  transition: 0.3s ease;
+  box-shadow: 0 0 4px rgba(0, 255, 255, 0.35);
+}
+
+.cv-btn:hover {
+  /* background: #00c9d4; */
+  transform: scale(1.04);
+  box-shadow: 0 0 9px rgba(0, 255, 255, 0.6);
+}
+
+footer {
+  padding: 25px;
+  text-align: center;
+  color: #aaa;
+  background: #0f0f0f;
+  margin-top: auto;
+}
