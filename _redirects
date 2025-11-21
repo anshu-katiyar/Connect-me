@@ -1,1 +1,6 @@
-/*    /index.html   200
+/about_me/*  /about_me/:splat  200
+/skills/*    /skills/:splat    200
+/project/*   /project/:splat   200
+/contact/*   /contact/:splat   200
+/hire_me/*   /hire_me/:splat   200
+/*           /index.html       200
