@@ -29,25 +29,25 @@
       </h1>
 
       <div class="card">
-        <form id="contactForm">
+        <form id="contactForm" action="https://formspree.io/f/xdkogkvo" method="POST">
           <div class="inputBox">
             <label>Your Name</label>
-            <input type="text" placeholder="Enter your full name" id="name" required />
+            <input type="text" placeholder="Enter your full name" id="name" name="name" required />
           </div>
 
           <div class="inputBox">
             <label>Your Gmail</label>
-            <input type="email" id="email" placeholder="Enter your Gmail" required />
+            <input type="email" id="email" name="email" placeholder="Enter your Gmail" required />
           </div>
 
           <div class="inputBox">
             <label>Your Mobile Number</label>
-            <input type="tel" id="mobile" placeholder="Enter your mobile number" required />
+            <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required />
           </div>
 
           <div class="inputBox">
             <label>Your Message</label>
-            <textarea placeholder="Type your message here..." id="message" required></textarea>
+            <textarea placeholder="Type your message here..." id="message" name="message" required></textarea>
           </div>
 
           <button class="sendBtn" type="submit" id="submit">Send</button>
